@@ -32,15 +32,15 @@ const Navbar = () => {
                 onClick={handleShowMenu}
             > <BiMenuAltRight /> </span>
             <ul 
-                className={`absolute left-[-400%] ${showMenu ? 'translate-x-0 flex' : 'translate-x-[200%] hidden md:flex'} flex-col gap-5 sm:gap-3 bg-white py-6 px-8 rounded-lg 
+                className={`absolute left-[-400%] ${showMenu ? 'translate-x-0 flex' : 'translate-x-[200%] hidden sm:flex'} flex-col gap-5 sm:gap-3 bg-white py-6 px-8 rounded-lg 
                             font-semibold z-10 sm:relative sm:flex-row sm:bg-transparent sm:py-0 sm:px-0
                             sm:items-center sm:text-white sm:left-0 sm:translate-x-0 transition-transform`}
             >
-                <li><Link href="/">Home</Link></li>
-                <li><Link href="/residencies">Properties</Link></li>
-                <li><Link href="/ourvalue">Our Value</Link></li>
-                <li><Link href="/contact">Contact Us</Link></li>
-                <li>
+                <li onClick={handleShowMenu}><Link href="/">Home</Link></li>
+                <li onClick={handleShowMenu}><Link href="/properties">Properties</Link></li>
+                <li onClick={handleShowMenu}><Link href="/ourvalue">Our Value</Link></li>
+                <li onClick={handleShowMenu}><Link href="/contact">Contact Us</Link></li>
+                <li onClick={handleShowMenu}>
                     <button 
                         className="text-light-blue text-center w-full px-3 py-1 bg-gradient-to-r from-blue-800 to-blue-600 rounded"
                     > 

@@ -7,7 +7,6 @@ import Slides from "@/components/Slides";
 import OurValue from "@/components/OurValue";
 import ContactUs from "@/components/ContactUs";
 import GetStarted from "@/components/GetStarted";
-import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -31,7 +30,6 @@ export default function Home() {
         <OurValue />
         <ContactUs />
         <GetStarted />
-        <Footer />
       </main>
     </>
   );

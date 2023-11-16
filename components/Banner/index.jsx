@@ -1,16 +1,17 @@
-
+import { useState } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import CountUp from "react-countup";
 import { IoLocationSharp } from "react-icons/io5";
 import bannerImg from "@/public/assets/banner1.webp";
 
 const Banner = () => {
- 
+
+  const [search, setSearch] = useState('')
+  const router = useRouter();
 
   return (
-    <section
-      className="bg-black flex items-center justify-center relative"
-    >
+    <section className="bg-black flex items-center justify-center relative">
       <div className="absolute top-[-1rem] left-0 w-[20rem] h-[20rem] blur-[100px] bg-gray-100 rounded-[100px]" />
       <div
         className="w-full px-6 sm:px-8 lg:px-12 py-12 flex flex-col gap-5 md:gap-12
@@ -39,30 +40,37 @@ const Banner = () => {
             </span>
             <input
               type="text"
-              name=""
+              value={search}
               placeholder="Search by location"
               className="w-full text-sm py-2 outline-none"
+              onChange={e => setSearch(e.target.value)}
             />
-            <button className="text-light-blue text-sm text-center px-4 py-1 bg-gradient-to-r from-blue-800 to-blue-600 rounded">
+            <button 
+              className="text-light-blue text-sm text-center px-4 py-1 bg-gradient-to-r from-blue-800 to-blue-600 rounded"
+              onClick={() => router.push(`/${search}`)}
+            >
               Search
             </button>
           </div>
           <div className="flex items-center justify-between gap-2">
             <p className="flex flex-col gap-2 items-center">
               <span className="text-2xl text-white">
-                <CountUp start={8800} end={9000} duration={5} /> <span className="text-orange-300">+</span>
+                <CountUp start={8900} end={9000} duration={5} />{" "}
+                <span className="text-orange-300">+</span>
               </span>
               <span className="text-sm text-gray-200">Premium Product</span>
             </p>
             <p className="flex flex-col gap-2 items-center">
               <span className="text-2xl text-white">
-              <CountUp start={900} end={1800} duration={5} /> <span className="text-orange-300">+</span>
+                <CountUp start={1500} end={1800} duration={5} />{" "}
+                <span className="text-orange-300">+</span>
               </span>
               <span className="text-sm text-gray-200">Happy Customer</span>
             </p>
             <p className="flex flex-col gap-2 items-center">
               <span className="text-2xl text-white">
-              <CountUp start={5} end={28} duration={5} /> <span className="text-orange-300">+</span>
+                <CountUp start={5} end={28} duration={5} />{" "}
+                <span className="text-orange-300">+</span>
               </span>
               <span className="text-sm text-gray-200">Awards Winning</span>
             </p>

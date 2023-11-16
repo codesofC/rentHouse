@@ -3,7 +3,7 @@
         {
             "id": 1,
             "title": "ZKC Villa",
-            "url": "https://images.pexels.com/photos/323776/pexels-photo-323776.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             "width": 500,
             "height": 350,
             "price": 8000,
@@ -18,7 +18,7 @@
         {
             "id": 2,
             "title": "Jansheen villan",
-            "url": "https://images.pexels.com/photos/3612403/pexels-photo-3612403.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "url": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             "width": 500,
             "height": 350,
             "price": 5000,
@@ -33,7 +33,7 @@
         {
             "id": 3,
             "title": "Cedar Ridge",
-            "url": "https://images.pexels.com/photos/5563472/pexels-photo-5563472.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "url": "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             "width": 500,
             "height": 350,
             "price": 12000,
@@ -48,7 +48,7 @@
         {
             "id": 4,
             "title": "Aliva Priva",
-            "url": "https://images.pexels.com/photos/534151/pexels-photo-534151.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "url": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             "width": 500,
             "height": 350,
             "price": 10000,
@@ -93,7 +93,7 @@
         {
             "id": 7,
             "title": "Kent Villa",
-            "url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "url": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             "width": 500,
             "height": 350,
             "price": 15300,

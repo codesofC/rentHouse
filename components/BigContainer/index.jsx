@@ -1,4 +1,5 @@
 import Navbar from "../Navbar"
+import Footer from "../Footer"
 import { createContext, useState, useEffect } from "react"
 
 export const dataFetch = createContext()
@@ -31,6 +32,7 @@ const BigContainer = ({children}) => {
               }
             </dataFetch.Provider>
         }
+        <Footer />
     </div>
   )
 }
