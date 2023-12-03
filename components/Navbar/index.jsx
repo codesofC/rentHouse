@@ -1,11 +1,9 @@
 
 import { useState } from "react"
-import Image from "next/image"
 import Link from "next/link"
 import { BiMenuAltRight } from "react-icons/bi"
-import logo from "@/public/assets/easxy.png"
 
-const Navbar = () => {
+const Navbar = ({ setShowLogin }) => {
 
     const [showMenu, setShowMenu] = useState()
 
@@ -17,14 +15,14 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 bg-black px-5 py-4 flex items-center justify-between z-20">
-        <div className="w-[80px]">
-            <Image 
-                src={logo} 
-                width={80} 
-                height={40} 
-                alt="Logo Image"
-                className="w-full h-full object-cover" 
-            />
+        <div
+            className="w-[80px]"
+        >
+            <div className="relative inline text-white font-bold text-2xl z-[1] before:content-[''] before:w-[20px] before:h-[20px] before:absolute 
+                        before:top-[-.5rem] before:right-[-.5rem] before:z-[-1] 
+                        before:rounded-full before:border-0 before:bg-gradient-to-r before:from-orange-300 before:to-orange-600">
+            EASXY
+          </div>
         </div>
         <div className="relative">
             <span 
@@ -43,6 +41,7 @@ const Navbar = () => {
                 <li onClick={handleShowMenu}>
                     <button 
                         className="text-light-blue text-center w-full px-3 py-1 bg-gradient-to-r from-blue-800 to-blue-600 rounded"
+                        onClick={() => setShowLogin(true)}
                     > 
                         Login 
                     </button>

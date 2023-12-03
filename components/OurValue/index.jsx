@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import bannerImg from "@/public/assets/banner2.avif";
 import {
@@ -12,19 +12,42 @@ import {
 } from "react-accessible-accordion";
 import "react-accessible-accordion/dist/fancy-example.css";
 import accordionData from "../Accordion";
+import { motion, useAnimation, useInView } from "framer-motion";
 import { MdOutlineArrowDropDown } from "react-icons/md"
 
 const OurValue = () => {
 
-    const [className, setClassName] = useState(null)
+    const refContainer = useRef()
+
+    const isInView = useInView(refContainer, { once: true })
+
+    const mainControls = useAnimation()
+
+    useEffect(() => {
+      if(isInView){
+        mainControls.start("visible")
+      }
+    }, [isInView])
 
   return (
     <section className="flex items-center justify-center relative">
       <div
         className="w-full px-6 sm:px-8 lg:px-12 py-12 flex flex-col gap-5 md:gap-12
                     md:flex-row md:items-end md:justify-between lg:w-[90%] xl:w-[70%]"
+        ref={refContainer}
       >
-        <div className="w-full md:w-[30rem] h-[35rem] border-4 border-gray-200 rounded-t-full overflow-hidden">
+        <motion.div 
+          variants={{
+            hidden: { opacity: 0, y: 100 },
+            visible: { opacity: 1, y: 0, transition: {
+              delay: 0.7,
+              duration: 0.5
+            } }
+          }}
+          initial="hidden"
+          animate={mainControls}
+          className="w-full md:w-[30rem] h-[35rem] border-4 border-gray-200 rounded-t-full overflow-hidden"
+        >
           <Image
             src={bannerImg}
             width={800}
@@ -32,7 +55,7 @@ const OurValue = () => {
             alt="House picture"
             className="w-full h-full object-cover"
           />
-        </div>
+        </motion.div>
         <div className="flex flex-col gap-12 w-full md:4/6 xl:w-1/2">
           <div className="flex flex-col gap-2">
             <h2 className="text-orange-400 font-bold"> Our Value </h2>

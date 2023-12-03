@@ -8,7 +8,7 @@ const Search = ({ data }) => {
     }
 
   return(
-    <section className="flex flex-col items-center justify-center gap-12 py-6 px-6 sm:px-8 md:px-12 xl:px-24 2xl:px-32">
+    <section className="flex flex-col items-center gap-12 py-6 px-6 sm:px-8 md:px-12 xl:px-24 2xl:px-32 min-h-[80vh]">
       
       <div className="grid grid-cols-2 gap-x-4 gap-y-4 md:grid-cols-3 md:gap-x-8 lg:grid-cols-4 xl:gap-x-24">
         {data.map(item => (
