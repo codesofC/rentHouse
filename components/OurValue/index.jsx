@@ -30,7 +30,7 @@ const OurValue = () => {
     }, [isInView])
 
   return (
-    <section className="flex items-center justify-center relative">
+    <section className="flex items-center justify-center relative" id="ourvalue">
       <div
         className="w-full px-6 sm:px-8 lg:px-12 py-12 flex flex-col gap-5 md:gap-12
                     md:flex-row md:items-end md:justify-between lg:w-[90%] xl:w-[70%]"
