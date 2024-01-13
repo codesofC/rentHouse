@@ -22,6 +22,11 @@ const DisplayItem = ({ item }) => {
 
     }, [isInView])
 
+    const formatCurrency = (number) => {
+      return new Intl.NumberFormat('en-US', {style: "currency", 
+    currency: "USD"}).format(number);
+    }
+
   return (
     <motion.div
         variants={{
@@ -50,8 +55,7 @@ const DisplayItem = ({ item }) => {
       </div>
       <div className="flex flex-col gap-2">
         <div className="text-lg font-semibold">
-          <span className="text-orange-300">$</span>
-          <span className="text-gray-200">{item.price}</span>
+          <span className="text-gray-200">{formatCurrency(item.price)}</span>
         </div>
         <h2 className="text-xl text-blue-600 font-bold">{item.title}</h2>
         <p className="text-sm">{item.description}</p>

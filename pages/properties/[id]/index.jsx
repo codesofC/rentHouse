@@ -14,6 +14,11 @@ const House = ({ data }) => {
     return <div>Item not exists</div>;
   }
 
+  const formatCurrency = (number) => {
+    return new Intl.NumberFormat('en-US', {style: "currency", 
+  currency: "USD"}).format(number);
+  }
+
   return (
     <>
       <Head>
@@ -42,7 +47,7 @@ const House = ({ data }) => {
               </span>
               <span className="text-lg text-orange-400 font-semibold">
                 {" "}
-                $ {data.price}{" "}
+                {formatCurrency(data.price)}
               </span>
             </div>
             <div className="flex items-center flex-wrap gap-4 text-blue-600">
