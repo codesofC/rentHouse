@@ -3,7 +3,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 # Rent House
   Plataforma de vendas de casas de luxo.
 
-## 👨🏾‍💻 Technologies
+## 👨🏾‍💻 Tecnologias
 * React
 * Next.js
 * Tailwind CSS
